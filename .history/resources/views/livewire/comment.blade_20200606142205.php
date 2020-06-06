@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="rounded border shadow p-3 my-2">
-            <div class="flex p-3 my-2">
+            <div class="flex shadow p-3 my-2">
                 <p class="font-bold text-lg">Samson</p>
                 <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">3 min ago</p>
             </div>
