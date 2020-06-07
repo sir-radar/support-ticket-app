@@ -30,6 +30,5 @@ class Comment extends Component
             'created_at' => Carbon::now()->diffForHumans(),
             'creator' => 'Samson'
         ];
-        $this->newComment = '';
     }
 }

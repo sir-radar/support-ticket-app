@@ -3,7 +3,6 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use Illuminate\Support\Carbon;
 
 class Comment extends Component
 {
@@ -30,6 +29,5 @@ class Comment extends Component
             'created_at' => Carbon::now()->diffForHumans(),
             'creator' => 'Samson'
         ];
-        $this->newComment = '';
     }
 }
