@@ -1,6 +1,5 @@
 <?php
 
-use App\Comment;
 use Illuminate\Support\Facades\Route;
 
 /*

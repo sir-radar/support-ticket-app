@@ -15,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $comments = Comment::all();
+    dd($comments)
+    return view('welcome', compact('comments'));
 });
