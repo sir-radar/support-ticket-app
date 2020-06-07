@@ -17,15 +17,24 @@ class Comment extends Component
         $this->comments = $initialComments;
     }
 
+    public function updated($field){
+        $this->validateOnly($field, [
+            'newComment' => 'required|max:255'
+        ]);
+    }
+
     public function render()
     {
         return view('livewire.comment');
     }
 
     public function addComment(){
-       if($this->newComment == ''){
-           return;
-       }
+       
+        $this->validate(
+            [
+                'newComment' => 'required|max:255'
+            ]
+        );
 
        $createdComment = Comments::create(
            [
