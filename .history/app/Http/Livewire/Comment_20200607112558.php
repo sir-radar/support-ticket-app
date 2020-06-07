@@ -13,7 +13,7 @@ class Comment extends Component
     public $newComment;
 
     public function mount(){
-        $initialComments = Comments::latest()->get();
+        $initialComments = Comments::all();
         $this->comments = $initialComments;
     }
 
@@ -30,10 +30,9 @@ class Comment extends Component
        $createdComment = Comments::create(
            [
                'body'=>$this->newComment,
-               'user_id'=>1
-            ]
+               'user_id'=>1]
         );
-       $this->comments->prepend($createdComment);
+       $this->comments->push($createdComment);
        $this->newComment = '';
     }
 }
