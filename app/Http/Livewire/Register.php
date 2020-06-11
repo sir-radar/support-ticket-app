@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\User;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class Register extends Component
 {
@@ -22,7 +23,9 @@ class Register extends Component
         ]);
 
         User::create($this->form);
-        return redirect()->route('login');
+        
+        Auth::attempt($this->form);
+        return redirect()->route('home');
     }
 
     public function render()
