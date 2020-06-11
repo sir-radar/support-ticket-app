@@ -1,6 +1,6 @@
-<div class="flex justify-center">
-    <div class="w-6/12">
-        <h1 class="my-10 text-3xl">Comments</h1>
+<div class="flex">
+    <div class="w-full">
+        <h1 class="text-3xl">Comments</h1>
         @error('newComment')<span class="text-red-500 text-xs"> {{ $message }}</span> @enderror
         <div>
             @if(session()->has('message'))
